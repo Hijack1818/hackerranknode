@@ -6,7 +6,7 @@ var logger = require('morgan');
 require('./connection');
 
 var indexRouter = require('./routes/index');
-
+var productStore = require('./routes/index');
 var app = express();
 
 // view engine setup
@@ -19,6 +19,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-
+app.use('/products',productStore);
 
 module.exports = app;
