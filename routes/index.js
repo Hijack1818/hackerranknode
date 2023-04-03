@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.send('<p>HTML Data</p>');
 });
 
-route.get('products',function(req,res,next){
+router.get('products',function(req,res,next){
   var json = {
     "id":storage.length+1,
     "name":req.name,
@@ -17,6 +17,6 @@ route.get('products',function(req,res,next){
   };
   storage.push(json);
   res.send(storage);
-})
+});
 
 module.exports = router;
