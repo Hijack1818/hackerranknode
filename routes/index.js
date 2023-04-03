@@ -16,7 +16,7 @@ router.get('/products',function(req,res,next){
     "isPublished":req.isPublished
   };
   storage.push(json);
-  res.send(201);
+  res.send(200);
 });
 
 module.exports = router;
