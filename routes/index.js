@@ -6,7 +6,8 @@ router.get('/', function(req, res, next) {
   res.send('<p>HTML Data</p>');
 });
 
-router.get('/products',function(req,res,next){
+router.post('/products',function(req,res,next){
+  console.log(req);
   var json = {
     "id":storage.length+1,
     "name":req.name,
