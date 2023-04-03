@@ -10,11 +10,11 @@ router.post('/products',function(req,res,next){
   // console.log(req.body);
   var json = {
     "id":storage.length+1,
-    "name":req.boyd.name,
-    "price":req.boyd.price,
-    "mrp":req.boyd.mrp,
-    "stock":req.boyd.stock,
-    "isPublished":req.boyd.isPublished
+    "name":req.body.name,
+    "price":req.body.price,
+    "mrp":req.body.mrp,
+    "stock":req.body.stock,
+    "isPublished":req.body.isPublished
   };
   storage.push(json);
   console.log(storage);
