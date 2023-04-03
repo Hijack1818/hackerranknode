@@ -7,17 +7,18 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/products',function(req,res,next){
-  console.log(req);
+  // console.log(req.body);
   var json = {
     "id":storage.length+1,
-    "name":req.name,
-    "price":req.price,
-    "mrp":req.mrp,
-    "stock":req.stock,
-    "isPublished":req.isPublished
+    "name":req.boyd.name,
+    "price":req.boyd.price,
+    "mrp":req.boyd.mrp,
+    "stock":req.boyd.stock,
+    "isPublished":req.boyd.isPublished
   };
   storage.push(json);
-  res.send(200);
+  console.log(storage);
+  res.send(201);
 });
 
 module.exports = router;
